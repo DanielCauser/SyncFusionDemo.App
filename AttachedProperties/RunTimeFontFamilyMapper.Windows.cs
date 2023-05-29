@@ -22,7 +22,7 @@ namespace SyncFusionDemo.AttachedProperties
 			var fontFamily = new FontFamily($"ms-appdata:///Local/{fontinfo[1]}#{fontinfo[0]}");
 			//I want to convert the SFCombobox parameter into the native winUI component, with access to the native
 			//FontFamily property.
-			//var nativeView = (PlatformComboBoxView)control.Handler.PlatformView;
+			var nativeView = control.Handler.PlatformView;
 			//nativeView.FontFamily = fontFamily;
 		}
 	}

@@ -11,9 +11,12 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+
+
+		comboBox.ItemsSource = new string[] { "One", "Two" };
 	}
 
-	private async void OnComboBoxSetFontCLicked(object sender, EventArgs e)
+	private async void FontPickerFont_Clicked(object sender, EventArgs e)
 	{
 		var file = await FilePicker.PickAsync();
 
@@ -39,9 +42,9 @@ public partial class MainPage : ContentPage
 	{
 		RunTimeFontFamilyMapper.SetFontFamily(Label, FontInfo);
 	}
-	private void FontPickerFont_Clicked(object sender, EventArgs e)
+	private void OnComboBoxSetFontCLicked(object sender, EventArgs e)
 	{
-		RunTimeFontFamilyMapper.SetFontFamily(ComboBox, FontInfo);
+		RunTimeFontFamilyMapper.SetFontFamily(comboBox, FontInfo);
 	}
 }
 
