@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SyncFusionDemo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+			<Label  FontSize="32"
+                HorizontalOptions="Center">
+				<Label.FormattedText>
+					<FormattedString>
+						<Span Text="Font Picked: "/>
+						<Span x:Name="FontPickedSpan"/>
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
+
+			<Button
+                x:Name="FontPickerFont"
+                Text="Pick Font"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnComboBoxSetFontCLicked"
+                HorizontalOptions="Center" />
+			
+			<HorizontalStackLayout HorizontalOptions="Center">
+				<Label
+                Text="Set Label Font"
+					x:Name="Label"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+				<Button
+                Text="Set Label Font"
+                Clicked="OnLabelSetFontClicked"
+                HorizontalOptions="Center" />
+			</HorizontalStackLayout>
+
+			<HorizontalStackLayout HorizontalOptions="Center">
+				<Label x:Name="ComboBox"  Text="Set Combo Box Font"
+                        SemanticProperties.HeadingLevel="Level2"
+                        SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                        FontSize="18"
+                        HorizontalOptions="Center" />
+
+				<Button Text="Set Combo Box Font"
+                        Clicked="OnComboBoxSetFontCLicked"
+                        HorizontalOptions="Center" />
+			</HorizontalStackLayout>
+
+			
+		</VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
